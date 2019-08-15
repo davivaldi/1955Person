@@ -18,13 +18,13 @@ exports.addPerson = function(req,res) {
 
 exports.deletePerson = function(req,res) {
     console.log("i Made it to the destruction");
-    People.remove({_id: req.params.id})
+    People.remove({name: req.params.name})
     .then(data => res.json(data))
     .catch(err => res.json(err));  
 }
 
 exports.viewPerson = function(req,res) {
-    People.findOne({_id: req.params.id})
+    People.findOne({name: req.params.name})
     .then(data => res.json(data))
     .catch(err => res.json(err)); 
 }

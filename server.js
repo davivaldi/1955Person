@@ -12,7 +12,7 @@ require("./server/config/mongoose.config");
 
 app.use(express.json());
 app.use(express.static(__dirname + "/client/static"));
-app.set("views", __dirname + "/client/views");
+app.set("views", __dirname + "/client/dist/client");
 app.use(express.urlencoded({extended: true}));
 
 require("./server/routes/routes")(app);
